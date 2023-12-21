@@ -57,7 +57,7 @@ class ESKBService(KBService):
             else:
                 logger.warning("ES未配置用户名和密码")
                 self.db_init = ElasticsearchStore(
-                    es_url=f"http://{self.IP}:{self.PORT}",
+                    es_url=f"http://localhost:{self.PORT}",
                     index_name=self.index_name,
                     query_field="context",
                     vector_query_field="dense_vector",
